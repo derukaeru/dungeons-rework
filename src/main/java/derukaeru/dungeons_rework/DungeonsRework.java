@@ -1,6 +1,6 @@
 package derukaeru.dungeons_rework;
 
-import derukaeru.dungeons_rework.items.modded_items;
+import derukaeru.dungeons_rework.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,7 +12,7 @@ public class DungeonsRework implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-        modded_items.initialize_items();
+        ModItems.initialize_items();
 		LOGGER.info("Hello Fabric world!");
 	}
 }

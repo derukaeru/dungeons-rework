@@ -11,16 +11,16 @@ import net.minecraft.util.Identifier;
 
 import derukaeru.dungeons_rework.DungeonsRework;
 
-public class modded_items {
-    public static final Item lock = register_item("lock", new Item.Settings());
-    public static final Item key = register_item("key", new Item.Settings());
+public class ModItems {
+    public static final Item lock = register_item("lock", new LockItem(new Item.Settings()));
+    public static final Item key = register_item("key", new KeyItem(new Item.Settings()));
 
-    private static Item register_item(String name, Item.Settings itemSettings) {
-        Identifier id = Identifier.of(DungeonsRework.MOD_ID, name);
-        RegistryKey<Item> key = RegistryKey.of(RegistryKeys.ITEM, id);
-        Item.Settings settings = itemSettings.registryKey(key);
-
-        return Registry.register(Registries.ITEM, key, new Item(settings));
+    private static Item register_item(String name, Item item) {
+        return Registry.register(
+                Registries.ITEM,
+                RegistryKey.of(RegistryKeys.ITEM, Identifier.of(DungeonsRework.MOD_ID, name)),
+                item
+        );
     }
 
     public static void initialize_items() {
