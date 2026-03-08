@@ -36,7 +36,7 @@ public class ModItems {
     }
 
     public static void initialize_items() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(entries -> {
             entries.add(lock);
             entries.add(key);
         });

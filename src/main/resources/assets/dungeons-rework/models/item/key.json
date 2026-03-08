@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "ecodynamics:textures/item/key"
+    "layer0": "dungeons-rework:item/key"
   }
 }
