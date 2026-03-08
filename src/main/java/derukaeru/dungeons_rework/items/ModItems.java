@@ -25,6 +25,7 @@ public class ModItems {
                     RegistryKey.of(RegistryKeys.ITEM, Identifier.of(DungeonsRework.MOD_ID, "key"))
             ))
     );
+
     private static Item register_item(String name, Item item) {
         Identifier id = Identifier.of(DungeonsRework.MOD_ID, name);
 
